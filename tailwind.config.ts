@@ -22,7 +22,8 @@ const config: Config = {
       animation: {
         "fade-in-up": "fade-in-up 1s ease-out forwards",
         float: "float 6s ease-in-out infinite",
-        shine: "shine 1.5s ease-out infinite"
+        shine: "shine 1.5s ease-out infinite",
+        "rotate-slow": "rotate-slow 12s ease-in-out infinite"
       },
       keyframes: {
         "fade-in-up": {
@@ -36,6 +37,10 @@ const config: Config = {
         shine: {
           "0%": { left: "-100%" },
           "100%": { left: "100%" }
+        },
+        "rotate-slow": {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" }
         }
       }
     }
