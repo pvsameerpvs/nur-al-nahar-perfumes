@@ -8,8 +8,8 @@ export function HeroSection() {
       
       {/* Background with Texture & Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-70"
-        style={{ backgroundImage: "url('/hero-ice-bg.png')" }}
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-90"
+        style={{ backgroundImage: "url('/hero-bg.png')" }}
       />
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
 
@@ -21,7 +21,7 @@ export function HeroSection() {
           <div className="absolute left-1/2 top-1/2 -z-10 h-[40%] w-[40%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-[80px] filter" />
           
           <Image
-            src="/perfume-bottle-floating.png"
+            src="/perfume-bottle-floating-1.png"
             alt="Signature Fragrance - L'Obscurité"
             fill
             className="object-contain drop-shadow-2xl"
