@@ -1,49 +1,131 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
-const brandLogos = [
-  "Lattafa",
-  "Rasasi",
-  "Armaf",
-  "Afnan",
-  "Reef",
-  "Arabiyat Prestige",
-  "Rayhaan",
-  "Al Haramain",
-  "Paris Corner",
-  "Fragrance World"
+const featuredBrands = [
+  { name: "Lattafa", collection: "Dubai Elite", image: "/brand-bottle-gold.png" },
+  { name: "Rasasi", collection: "Royal Collection", image: "/brand-bottle-black.png" },
+  { name: "Armaf", collection: "Club Luxe", image: "/brand-bottle-blue.png" },
+  { name: "Afnan", collection: "Rare Blends", image: "/brand-bottle-gold.png" },
+  { name: "Reef", collection: "Oceanic Oud", image: "/brand-bottle-black.png" },
+  { name: "Arabiyat Prestige", collection: "Prestige Line", image: "/brand-bottle-blue.png" },
+  { name: "Rayhaan", collection: "Natural Essence", image: "/brand-bottle-gold.png" },
+  { name: "Al Haramain", collection: "Heritage Forest", image: "/brand-bottle-black.png" },
+  { name: "Paris Corner", collection: "French Fusion", image: "/brand-bottle-blue.png" },
+  { name: "Fragrance World", collection: "Global Scents", image: "/brand-bottle-gold.png" },
 ];
 
 export function BrandsSection() {
+  const [selectedBrand, setSelectedBrand] = useState<(typeof featuredBrands)[0] | null>(null);
+
+  const getWhatsAppLink = (brandName: string, collection: string) => {
+    const phoneNumber = "971583040495";
+    const message = `Hello, I am interested in purchasing ${brandName} - ${collection} from your website.`;
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  };
+
   return (
-    <Section className="pb-24">
-      <div className="flex items-end justify-between gap-6">
-        <div>
-          <div className="text-xs tracking-[0.32em] text-white/60">PARTNERS</div>
-          <h2 className="mt-3 font-serif text-3xl tracking-tight">Brands we work with</h2>
+    <Section className="py-24 bg-black">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="mb-16">
+             <h2 className="text-4xl md:text-5xl font-serif text-white mb-3">Our Brands</h2>
+             <p className="text-neutral-400">Curated collection from the world&apos;s finest perfume houses.</p>
         </div>
-        <Button asChild variant="secondary" className="hidden md:inline-flex">
-          <Link href="/brands">See all</Link>
-        </Button>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+           {featuredBrands.map((brand, i) => (
+             <div 
+               key={i} 
+               className="group flex flex-col items-center text-center cursor-pointer"
+               onClick={() => setSelectedBrand(brand)}
+             >
+                {/* Image Card */}
+                <div className="relative w-full aspect-[4/5] mb-6 flex items-center justify-center bg-zinc-900/30 rounded-lg overflow-hidden border border-white/5 transition-all duration-300 group-hover:border-white/10 group-hover:bg-zinc-900/50">
+                    {/* Inner shadow/glow for premium feel */}
+                    <div className="absolute inset-0 bg-radial-gradient from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="relative w-3/4 h-3/4">
+                        <Image
+                            src={brand.image}
+                            alt={brand.name}
+                            fill
+                            className="object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                        />
+                    </div>
+                </div>
+                
+                {/* Content */}
+                <h3 className="text-xl text-white font-medium mb-1 tracking-wide">{brand.name}</h3>
+                {/* Collection Name acting as subtitle */}
+                <p className="text-neutral-500 text-sm mb-3 font-medium">{brand.collection}</p>
+                
+                {/* Rating (Clean Visual) */}
+                <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-amber-500 text-[10px]">★</span>
+                    ))}
+                </div>
+             </div>
+           ))}
+
+            
+        </div>
+        
+        <div className="mt-20 text-center">
+             <Button asChild className="bg-white text-black hover:bg-gray-200 px-10 py-6 rounded-lg text-lg font-semibold transition-all">
+                <Link href="/brands">View Full Catalog</Link>
+             </Button>
+        </div>
       </div>
 
-      <Separator className="my-8" />
+      {/* Detail Modal */}
+      <Dialog open={!!selectedBrand} onOpenChange={(open) => !open && setSelectedBrand(null)}>
+        <DialogContent className="bg-zinc-950 border-white/10 text-white sm:max-w-md">
+            <DialogHeader>
+            <DialogTitle className="text-2xl font-serif text-center">{selectedBrand?.name}</DialogTitle>
+            </DialogHeader>
+            
+            <div className="flex flex-col items-center py-6">
+                <div className="relative w-48 h-64 mb-6">
+                     {selectedBrand && (
+                        <Image
+                            src={selectedBrand.image}
+                            alt={selectedBrand.name}
+                            fill
+                            className="object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+                        />
+                     )}
+                </div>
+                <p className="text-neutral-400 mb-2 font-medium">{selectedBrand?.collection}</p>
+                 <div className="flex gap-1 mb-8">
+                    {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-amber-500 text-xs">★</span>
+                    ))}
+                </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-        {brandLogos.map((b) => (
-          <div
-            key={b}
-            className="flex h-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-sm text-white/80 transition hover:bg-white/10"
-          >
-            {b}
-          </div>
-        ))}
-        <div className="flex h-16 items-center justify-center rounded-2xl border border-white/10 bg-black/40 text-sm text-white/70">
-          And many more
-        </div>
-      </div>
+                {selectedBrand && (
+                    <Button 
+                        asChild 
+                        className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold py-6 rounded-lg text-lg"
+                    >
+                        <Link href={getWhatsAppLink(selectedBrand.name, selectedBrand.collection)} target="_blank">
+                           Order via WhatsApp
+                        </Link>
+                    </Button>
+                )}
+            </div>
+        </DialogContent>
+      </Dialog>
     </Section>
   );
 }
