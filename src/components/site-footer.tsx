@@ -37,7 +37,7 @@ export default function Footer() {
               <span className="block mt-2 text-white/90 font-medium">+971 58 304 0495</span>
             </p>
             <div className="flex gap-4">
-                <a href="https://maps.google.com" target="_blank" className="inline-block text-xs text-white/60 hover:text-white underline underline-offset-4 decoration-white/30 transition-all">
+                <a href="https://maps.app.goo.gl/HTRhUJr2bxD2iiQA7?g_st=ic" target="_blank" className="inline-block text-xs text-white/60 hover:text-white underline underline-offset-4 decoration-white/30 transition-all">
                     Get Directions
                 </a>
                  <a href="tel:+971583040495" className="inline-block text-xs text-white/60 hover:text-white underline underline-offset-4 decoration-white/30 transition-all">

@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           {/* CTA Button */}
        
-          <Button asChild size="sm" className="group relative  overflow-hidden rounded-full bg-white px-5 text-base font-medium text-black transition-all hover:scale-105 hover:bg-white/90 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
+          <Button asChild size="sm" className="hidden md:inline-flex group relative  overflow-hidden rounded-full bg-white px-5 text-base font-medium text-black transition-all hover:scale-105 hover:bg-white/90 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
             <Link href="/product">
               <span className="relative z-10">Shop Collection</span>
             </Link>
@@ -58,22 +58,46 @@ export default function Navbar() {
             <SheetTrigger asChild>
               <button
                 aria-label="Open menu"
-                className="ml-2 inline-flex items-center justify-center text-white md:hidden"
+                className="ml-2 inline-flex items-center justify-center text-white md:hidden hover:text-white/80 transition-colors"
               >
-                <Menu className="h-6 w-6" />
+                <Menu className="h-8 w-8" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-black/95 border-white/10 text-white">
-              <div className="flex flex-col gap-6 pt-10">
-                {links.map((l) => (
-                  <Link
-                    key={l.href}
-                    href={l.href}
-                    className="text-lg font-medium text-white/80 transition hover:text-white"
-                  >
-                    {l.label}
-                  </Link>
-                ))}
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] border-l border-white/10 bg-zinc-950/95 backdrop-blur-xl text-white p-0">
+              <div className="flex flex-col h-full">
+                {/* Mobile Menu Header */}
+                <div className="p-8 border-b border-white/5">
+                   <div className="flex flex-col items-start leading-none">
+                      <span className="font-serif text-xl font-bold tracking-widest text-white">NUR AL NAHAR</span>
+                      <span className="text-[0.6rem] tracking-[0.2em] text-white/50 mt-1">EST. 2023</span>
+                   </div>
+                </div>
+
+                {/* Mobile Links */}
+                <div className="flex-1 flex flex-col justify-center px-8 gap-8">
+                    {links.map((l) => (
+                        <Link
+                            key={l.href}
+                            href={l.href}
+                            className="text-3xl font-serif font-medium text-white/60 hover:text-white transition-all hover:translate-x-2"
+                        >
+                            {l.label}
+                        </Link>
+                    ))}
+                </div>
+
+                {/* Mobile Footer */}
+                <div className="p-8 border-t border-white/5 bg-white/[0.02]">
+                    <div className="space-y-4">
+                        <Link href="/product" className="block w-full text-center py-4 rounded-full bg-white text-black font-medium text-sm tracking-widest uppercase hover:bg-zinc-200 transition-colors">
+                            Shop Collection
+                        </Link>
+                        <div className="flex justify-between items-center pt-2 px-2">
+                             <a href="https://wa.me/971583040495" className="text-white/40 hover:text-white text-xs tracking-widest uppercase transition-colors">WhatsApp</a>
+                             <a href="mailto:info@nuralnahar.com" className="text-white/40 hover:text-white text-xs tracking-widest uppercase transition-colors">Email</a>
+                        </div>
+                    </div>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
