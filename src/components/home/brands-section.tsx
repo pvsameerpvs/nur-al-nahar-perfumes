@@ -25,7 +25,7 @@ const featuredBrands = [
   { name: "Fragrance World", collection: "Global Scents", image: "/brand-bottle-gold.png" },
 ];
 
-export function BrandsSection() {
+export function BrandsSection({ showViewAll = true }: { showViewAll?: boolean }) {
   const [selectedBrand, setSelectedBrand] = useState<(typeof featuredBrands)[0] | null>(null);
 
   const getWhatsAppLink = (brandName: string, collection: string) => {
@@ -35,11 +35,20 @@ export function BrandsSection() {
   };
 
   return (
-    <Section className="py-24 bg-black">
+    <Section className="py-10 bg-black">
       <div className="w-full px-4 md:px-6">
-        <div className="mb-16">
-             <h2 className="text-4xl md:text-5xl font-serif text-white mb-3">Our Brands</h2>
-             <p className="text-neutral-400">Curated collection from the world&apos;s finest perfume houses.</p>
+        <div className="mb-20 text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium tracking-[0.2em] uppercase text-white/70 backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                Partner Brands
+            </div>
+             <h2 className="text-4xl md:text-6xl font-serif font-medium text-white tracking-tight">
+                Curated <span className="text-white/40 italic">Collections</span>
+             </h2>
+             <p className="text-neutral-400 max-w-xl mx-auto text-lg font-light leading-relaxed">
+                We partner with the most distinguished names in modern perfumery. 
+                Authentic, powerful, and selected for the Dubai lifestyle.
+             </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
@@ -81,11 +90,13 @@ export function BrandsSection() {
             
         </div>
         
-        <div className="mt-20 text-center">
-             <Button asChild className="bg-white text-black hover:bg-gray-200 px-10 py-6 rounded-lg text-lg font-semibold transition-all">
-                <Link href="/brands">View Full Catalog</Link>
-             </Button>
-        </div>
+        {showViewAll && (
+            <div className="mt-20 text-center">
+                 <Button asChild className="bg-white text-black hover:bg-gray-200 px-10 py-6 rounded-lg text-lg font-semibold transition-all">
+                    <Link href="/brands">View Full Catalog</Link>
+                 </Button>
+            </div>
+        )}
       </div>
 
       {/* Detail Modal */}
