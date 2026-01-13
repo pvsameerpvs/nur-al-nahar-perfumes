@@ -16,7 +16,7 @@ export function MostSellingSection() {
         <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800 via-neutral-950 to-black" />
       </div>
 
-      <div className="container relative z-20 mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between h-full">
+      <div className="relative z-20 w-full px-4 md:px-8 flex flex-col md:flex-row items-center justify-between h-full">
         {/* Text Content */}
         <div className="flex-1 text-left space-y-6 md:pl-10 lg:pl-20">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight tracking-tight">

@@ -11,7 +11,7 @@ export function FusionSection() {
          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[100px]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 md:px-6 text-center">
+      <div className="relative z-10 w-full px-4 md:px-6 text-center">
         {/* Header */}
         <div className="mb-16 md:mb-24 space-y-4">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white tracking-tight">

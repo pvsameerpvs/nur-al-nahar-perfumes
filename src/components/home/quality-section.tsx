@@ -15,7 +15,7 @@ export function QualitySection() {
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-zinc-900/40 rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="relative z-10 w-full px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Content */}
         <div className="flex-1 space-y-8 text-left max-w-xl">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-tight">

@@ -36,7 +36,7 @@ export function BrandsSection() {
 
   return (
     <Section className="py-24 bg-black">
-      <div className="container px-4 md:px-6 mx-auto">
+      <div className="w-full px-4 md:px-6">
         <div className="mb-16">
              <h2 className="text-4xl md:text-5xl font-serif text-white mb-3">Our Brands</h2>
              <p className="text-neutral-400">Curated collection from the world&apos;s finest perfume houses.</p>
