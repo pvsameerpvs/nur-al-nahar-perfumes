@@ -5,6 +5,7 @@ import { FusionSection } from "@/components/home/fusion-section";
 import { QualitySection } from "@/components/home/quality-section";
 import { BrandsSection } from "@/components/home/brands-section";
 import { MostSellingSection } from "@/components/home/most-selling-section";
+import { ComingSoonSection } from "@/components/home/coming-soon-section";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -18,9 +19,10 @@ export default function HomePage() {
       <HeroSection />
       <PhilosophySection />
       <MostSellingSection />
+       <BrandsSection />
+        <QualitySection />
       <FusionSection />
-      <QualitySection />
-      <BrandsSection />
+      <ComingSoonSection/>
     </div>
   );
 }
