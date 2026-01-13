@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, Search, ShoppingCart } from "lucide-react";
@@ -16,6 +18,7 @@ const links = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-transparent text-white">
@@ -54,7 +57,7 @@ export default function Navbar() {
     
 
           {/* Mobile Menu Trigger */}
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <button
                 aria-label="Open menu"
@@ -80,6 +83,7 @@ export default function Navbar() {
                             key={l.href}
                             href={l.href}
                             className="text-3xl font-serif font-medium text-white/60 hover:text-white transition-all hover:translate-x-2"
+                            onClick={() => setOpen(false)}
                         >
                             {l.label}
                         </Link>
@@ -89,7 +93,7 @@ export default function Navbar() {
                 {/* Mobile Footer */}
                 <div className="p-8">
                     <div className="space-y-4">
-                        <Link href="/product" className="block w-full text-center p-2 rounded-full bg-white text-black font-medium text-sm tracking-widest uppercase hover:bg-zinc-200 transition-colors">
+                        <Link href="/product" className="block w-full text-center p-2 rounded-full bg-white text-black font-medium text-sm tracking-widest uppercase hover:bg-zinc-200 transition-colors" onClick={() => setOpen(false)}>
                             Shop Collection
                         </Link>
                         <div className="flex justify-between items-center pt-2 px-2">
