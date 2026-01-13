@@ -15,7 +15,7 @@ export function HeroSection() {
 
       {/* 3D Bottle Display - Positioned Behind Content */}
       <div className="absolute inset-0 z-0 flex items-center justify-center overflow-visible">
-        <div className="animate-float animate-rotate-slow pointer-events-none relative mt-20 h-[80vh] w-full max-w-[800px] opacity-90 mix-blend-normal md:h-full md:max-w-[1000px]">
+        <div className="animate-float animate-rotate-slow pointer-events-none relative mt-10 h-[80vh] w-full scale-[4.5] opacity-90 mix-blend-normal md:mt-0 md:h-full md:w-full md:max-w-[1000px] md:scale-100">
           {/* Glow Effect */}
           <div className="absolute left-1/2 top-1/2 -z-10 h-[60%] w-[60%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/10 blur-[100px] filter" />
           <div className="absolute left-1/2 top-1/2 -z-10 h-[40%] w-[40%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-[80px] filter" />

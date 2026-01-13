@@ -87,9 +87,9 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Footer */}
-                <div className="p-8 border-t border-white/5 bg-white/[0.02]">
+                <div className="p-8">
                     <div className="space-y-4">
-                        <Link href="/product" className="block w-full text-center py-4 rounded-full bg-white text-black font-medium text-sm tracking-widest uppercase hover:bg-zinc-200 transition-colors">
+                        <Link href="/product" className="block w-full text-center p-2 rounded-full bg-white text-black font-medium text-sm tracking-widest uppercase hover:bg-zinc-200 transition-colors">
                             Shop Collection
                         </Link>
                         <div className="flex justify-between items-center pt-2 px-2">
