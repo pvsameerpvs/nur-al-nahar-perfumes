@@ -6,6 +6,7 @@ import { QualitySection } from "@/components/home/quality-section";
 import { BrandsSection } from "@/components/home/brands-section";
 import { MostSellingSection } from "@/components/home/most-selling-section";
 import { ComingSoonSection } from "@/components/home/coming-soon-section";
+import { GlobalReachSection } from "@/components/home/global-reach-section";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -19,8 +20,9 @@ export default function HomePage() {
       <HeroSection />
       <PhilosophySection />
       <MostSellingSection />
-       <BrandsSection />
-        <QualitySection />
+      <BrandsSection />
+      <GlobalReachSection />
+      <QualitySection />
       <FusionSection />
       <ComingSoonSection/>
     </div>
