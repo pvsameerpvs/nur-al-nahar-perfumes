@@ -13,16 +13,16 @@ import {
 } from "@/components/ui/dialog";
 
 const featuredBrands = [
-  { name: "Lattafa", collection: "Dubai Elite", image: "/brand-bottle-gold.png" },
-  { name: "Rasasi", collection: "Royal Collection", image: "/brand-bottle-black.png" },
-  { name: "Armaf", collection: "Club Luxe", image: "/brand-bottle-blue.png" },
-  { name: "Afnan", collection: "Rare Blends", image: "/brand-bottle-gold.png" },
-  { name: "Reef", collection: "Oceanic Oud", image: "/brand-bottle-black.png" },
-  { name: "Arabiyat Prestige", collection: "Prestige Line", image: "/brand-bottle-blue.png" },
-  { name: "Rayhaan", collection: "Natural Essence", image: "/brand-bottle-gold.png" },
-  { name: "Al Haramain", collection: "Heritage Forest", image: "/brand-bottle-black.png" },
-  { name: "Paris Corner", collection: "French Fusion", image: "/brand-bottle-blue.png" },
-  { name: "Fragrance World", collection: "Global Scents", image: "/brand-bottle-gold.png" },
+  { name: "Lattafa", collection: "Dubai Elite", image: "/lattafa-logo-final-2.svg" },
+  { name: "Rasasi", collection: "Royal Collection", image: "/rasasi.png" },
+  { name: "Armaf", collection: "Club Luxe", image: "/armaf.jpg" },
+  { name: "Afnan", collection: "Rare Blends", image: "/afnan.jpg" },
+  { name: "Reef", collection: "Oceanic Oud", image: "/Reef.jpg" },
+  { name: "Arabiyat Prestige", collection: "Prestige Line", image: "/arabiyath.png" },
+  { name: "Rayhaan", collection: "Natural Essence", image: "/rayhaan.jpg" },
+  { name: "Al Haramain", collection: "Heritage Forest", image: "/al-haramain.png" },
+  { name: "Paris Corner", collection: "French Fusion", image: "/paris-corner.png" },
+  { name: "Fragrance World", collection: "Global Scents", image: "/fragrance-world.png" },
 ];
 
 export function BrandsSection({ showViewAll = true }: { showViewAll?: boolean }) {
