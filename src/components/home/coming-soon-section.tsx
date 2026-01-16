@@ -16,14 +16,14 @@ const comingSoonProducts = [
     title: "Signature Deodorant",
     subtitle: "Body Spray Collection",
     description: "Long-lasting freshness with the depth of a fine fragrance. Designed for the daily ritual.",
-    image: "/nur-al-nahr.png", // Placeholder re-use
+    image: "/signature-deodorant.jpeg", // Placeholder re-use
     gradient: "from-blue-500/20 to-cyan-500/20"
   },
   {
     title: "Luxury Air Fresheners",
     subtitle: "Home Ambience",
     description: "Transform your space. A curated selection of room scents that linger like a memory.",
-    image: "/nur-al-nahr.png", // Placeholder re-use
+    image: "/luxury-air-fresheners.jpeg", // Placeholder re-use
     gradient: "from-emerald-500/20 to-teal-500/20"
   }
 ];
