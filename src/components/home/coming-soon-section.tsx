@@ -9,21 +9,21 @@ const comingSoonProducts = [
     title: "Miniature Collection",
     subtitle: "25ml Pocket Perfumes",
     description: "Your favorite scents, refined for travel. The essence of luxury in a compact form.",
-    image: "/brand-bottle-gold.png", // Placeholder re-use
+    image: "/nur-al-nahr.png", // Placeholder re-use
     gradient: "from-amber-500/20 to-purple-500/20"
   },
   {
     title: "Signature Deodorant",
     subtitle: "Body Spray Collection",
     description: "Long-lasting freshness with the depth of a fine fragrance. Designed for the daily ritual.",
-    image: "/brand-bottle-black.png", // Placeholder re-use
+    image: "/nur-al-nahr.png", // Placeholder re-use
     gradient: "from-blue-500/20 to-cyan-500/20"
   },
   {
     title: "Luxury Air Fresheners",
     subtitle: "Home Ambience",
     description: "Transform your space. A curated selection of room scents that linger like a memory.",
-    image: "/brand-bottle-blue.png", // Placeholder re-use
+    image: "/nur-al-nahr.png", // Placeholder re-use
     gradient: "from-emerald-500/20 to-teal-500/20"
   }
 ];
