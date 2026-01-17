@@ -50,7 +50,7 @@ export default function Navbar() {
           {/* CTA Button */}
        
           <Button asChild size="sm" className="hidden md:inline-flex group relative  overflow-hidden rounded-full bg-white px-5 text-base font-medium text-black transition-all hover:scale-105 hover:bg-white/90 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
-            <Link href="/product">
+            <Link href="/brands">
               <span className="relative z-10">Shop Collection</span>
             </Link>
           </Button>

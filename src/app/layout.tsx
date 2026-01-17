@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import SiteShell from "@/components/site-shell";
 
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
-const serif = Playfair_Display({ subsets: ["latin"], variable: "--font-serif", display: "swap" });
+const sans = localFont({
+  src: "../fonts/Inter-Variable.woff2",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const serif = localFont({
+  src: "../fonts/PlayfairDisplay-Variable.woff2",
+  variable: "--font-serif",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
