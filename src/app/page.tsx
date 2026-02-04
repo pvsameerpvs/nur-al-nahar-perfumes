@@ -8,6 +8,8 @@ import { MostSellingSection } from "@/components/home/most-selling-section";
 import { ComingSoonSection } from "@/components/home/coming-soon-section";
 import { GlobalReachSection } from "@/components/home/global-reach-section";
 
+import { AirSprayPromoSection } from "@/components/home/air-spray-promo-section";
+
 export const metadata: Metadata = {
   title: "Home",
   description:
@@ -21,6 +23,7 @@ export default function HomePage() {
       <PhilosophySection />
       <MostSellingSection />
       <BrandsSection />
+      <AirSprayPromoSection />
       <GlobalReachSection />
       <QualitySection />
       <FusionSection />

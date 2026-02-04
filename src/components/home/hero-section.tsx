@@ -49,7 +49,15 @@ export function HeroSection() {
           Designed to captivate.
         </p>
 
-       
+        {/* CTA Buttons */}
+        <div className="animate-fade-in-up delay-300 mt-12 flex flex-wrap items-center justify-center gap-4">
+          <Button asChild size="lg" className="rounded-full bg-white px-8 py-6 text-base font-medium text-black hover:bg-white/90">
+            <Link href="/brands">View Collection</Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full border-white/20 px-8 py-6 text-base font-medium text-white hover:bg-white/10">
+            <Link href="/air-spray">Air Fresh Series</Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
