@@ -15,6 +15,11 @@ const airFreshImages = [
   "/air-fresh8.png",
   "/air-fresh9.png",
   "/air-fresh10.png",
+  "/air-fresh11.png",
+  "/air-fresh12.png",
+  "/air-fresh13.png",
+  "/air-fresh14.png",
+  "/air-fresh15.png",
 ];
 
 export function AirSpraySection() {

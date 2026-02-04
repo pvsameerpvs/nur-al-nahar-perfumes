@@ -73,7 +73,7 @@ export function AirSprayPromoSection() {
               className="absolute top-20 left-0 w-40 h-56 opacity-40 blur-[2px]"
             >
               <Image
-                src="/air-fresh2.png"
+                src="/hero-img1.png"
                 alt="Air Spray 2"
                 fill
                 className="object-contain"
@@ -87,7 +87,7 @@ export function AirSprayPromoSection() {
               className="absolute bottom-10 right-0 w-48 h-64 opacity-60 z-30"
             >
               <Image
-                src="/air-fresh3.png"
+                src="/hero-img2.png"
                 alt="Air Spray 3"
                 fill
                 className="object-contain drop-shadow-2xl"
@@ -109,7 +109,7 @@ export function AirSprayPromoSection() {
             >
               <div className="relative w-72 h-96 md:w-80 md:h-[500px]">
                 <Image
-                  src="/air-fresh1.png"
+                  src="/hero-img3.png"
                   alt="Featured Air Spray"
                   fill
                   className="object-contain drop-shadow-[0_20px_60px_rgba(255,255,255,0.15)]"
